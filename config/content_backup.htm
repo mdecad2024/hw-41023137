@@ -257,8 +257,11 @@ openByGet();
 <h3>w7</h3>
 <p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/-BmbplC84oQ?si=AuqjuDD2gm4JPzIF" title="YouTube video player" width="560"></iframe></p>
 <h3>w10</h3>
+<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/Yl-yZlPYnUw?si=UV-N2ovkfBNDxVBd" title="YouTube video player" width="560"></iframe></p>
 <script src="/static/jsc3d.js" type="text/javascript"></script>
 <div id="models"><canvas height="300" id="cv1" style="border: 1px solid;" width="400"></canvas>
+<p><a href="https://s104.cycu.org/~41023137/Exam1.stl">題目一stl</a></p>
+<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/aoT261vo2ng?si=BAFy8ZYoO8fdIIkL" title="YouTube video player" width="560"></iframe> <canvas height="300" id="cv2" style="border: 1px solid;" width="400"></canvas> <!-- 可以添加更多的 canvas --></div>
 <div style="width: 400px; height: 70px; border: 1px solid;">Model Color:<input id="mdlClr" onchange="changeOption('ModelColor',this.value)" style="margin-right: 50px;" type="color" value="#00ff40"/> Back Color1:<input id="bckClr1" onchange="changeOption('BackgroundColor1',this.value)" style="margin-right: 50px;" type="color"/> Back Color2:<input id="bckClr2" onchange="changeOption('BackgroundColor2',this.value)" type="color"/><br/> Render Mode:<select id="render" onchange="changeOption('RenderMode',this.value)">
 <option>Flat</option>
 <option>Point</option>
@@ -313,11 +316,13 @@ function openByUrl(){
     opt.SceneUrl = url;
     // 可以添加更多的 STL URL
     readSTLfile(opt, 'cv1'); // 為每個 canvas 調用
+    readSTLfile(opt, 'cv2'); // 第二個 canvas
 }
 
 function openByGet(){
     var urls = [
-        "https://s104.cycu.org/~41023137/Exam1.stl"
+        "https://s104.cycu.org/~41023137/Exam1.stl",
+        "https://s104.cycu.org/~41023137/Exam1-2.stl"
     ];
     var opt = getOptions();
     urls.forEach((url, index) => {
@@ -328,8 +333,7 @@ function openByGet(){
 
 openByGet();
 </script>
-<p><a href="https://s104.cycu.org/~41023137/Exam1.stl">Exam1</a></p>
-</div><h1>HW2</h1>
+<p><a href="https://s104.cycu.org/~41023137/Exam1-2.stl">題目三stl</a></p><h1>HW2</h1>
 <p>Homework 2 (10%):</p>
 <p style="padding-left: 30px;">利用 Solvespace 與 NX 建立 <a href="https://mde.tw/cad2024/content/BonW.html">Balance on Wheels</a> 組立件</p>
 <hr/>
